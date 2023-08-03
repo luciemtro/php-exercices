@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,6 +13,8 @@
     <h2>Je constate que :</h2>
     <ul>
         <li>Tout s'execute dans l'ordre.</li>
+        <li>Dans un chaine de caractère se trouvant dans echo, on échappe les $</li>
+        <li>Toujours dans echo, on sépare une chaine de caractère d'une variable ou tableau d'un point</li>
     </ul>
 
     <h2>J'ai crée mon tableau my family</h2>
@@ -70,6 +67,7 @@
         echo '</pre>';
         ?>
     </p>
+
     <h2>La méthode courte: </h2>
     <p>
         $countries[] = 'Mon arrière grand mère'
@@ -95,11 +93,119 @@
             echo $person['function'];
         ?>.
     </p>
-    <h2>Tableaux associatifs</h2>
-    <p>
 
+    <h2>Tableaux associatifs</h2>
+    <h3>Je créer un tableau me concernant : </h3>
+    <p>
+        <?php
+            $me = array(
+                "firtsname" => "Lucie",
+                "lastname" => "Monteiro",
+                "age" => 29,
+                "taille" => 1.57
+            );
+            echo '<pre>';
+            print_r($me);
+            echo '</pre>';
+        ?>
     </p>
 
+    <h2>Tableaux multidimensionnels</h2>
+    <h3>Mon tableau $me</h3>
+    <p>
+        J'ajoute un nouveau tableau plat favoris
+        <?php
+            $me = array(
+                "firtsname" => "Lucie",
+                "lastname" => "Monteiro",
+                "age" => 29,
+                "taille" => 1.57,
+                "football" => false,
+                "plat_favoris" => array("raclette", "filet américain", "pizza", "risotto") 
+            );
+        ?>
+        Ensuite on ajoute un nouveau tableau dans mon tableau $me avec la methode short : $me["hobbies"] = ...
+
+        <?php
+            $me["hobbies"] = ["code", "jeu", "puzzle"];
+            echo '<pre>';
+            print_r($me);
+            echo '</pre>';
+        ?>
+    </p>
+
+    <h3>Tableau de mon père $papa</h3>
+    <p>
+    <?php
+            $papa = array(
+                "firtsname" => "Françisco",
+                "lastname" => "Monteiro",
+                "age" => 55,
+                "taille" => 1.68,
+                "football" => false,
+                "plat_favoris" => array("couscous", "chili", "pâte", "riz pilaf"), // Vérifiez qu'il y a une virgule ici
+            );           
+            $papa["hobbies"] = ["guitare", "cuisine"];
+            echo '<pre>';
+            print_r($papa);
+            echo '</pre>';
+        ?>
+    </p>
+
+    <h3>Affectation du tableau $papa à mon tableau $me avec la KEY pere</h3>
+    <p>
+        $me["pere"] = $papa;
+        <?php
+            $me["pere"] = $papa;
+            echo '<pre>';
+            print_r($me);
+            echo '</pre>';
+        ?>
+    </p>
+
+    <h3>Nombre de hobbies dans le tableau $me, on utilise count</h3>
+    <p>
+        <?php
+            $nombreHobbiesMe = count($me['hobbies']);
+            echo "Nombre de hobbies dans le tableau \$me : " . $nombreHobbiesMe;
+        ?>
+    </p>
+
+    <h3>Nombre de hobbies dans le tableau $papa</h3>
+    <p>
+        <?php
+        $nombreHobbiesPapa = count($me['pere']['hobbies']);
+        echo "Nombre de hobbies dans le tableau \$papa : " . $nombreHobbiesPapa;
+        ?>
+    </p>
+
+    <h3>Total du nombres d'hobbis des deux</h3>
+    <p>
+        <?php
+           $nombreHobbiesTotal = count($me['hobbies']) + count($papa['hobbies']);
+           echo "Nombre total de hobbies : " . $nombreHobbiesTotal;
+           ?>
+    </p>
+
+    <h3>Ajout new hobbie : $me["hobbies"][] = "taxidermy";</h3>
+    <p>
+        <?php
+            $me["hobbies"][] = "taxidermy";
+            echo '<pre>';
+            print_r($me);
+            echo '</pre>';
+        ?>
+    </p>
+
+    <h3>Je remplace mon nom : $me["lastname"] = "durand";</h3>
+    <p>
+        <?php
+            $me["lastname"] = "durand";
+            echo '<pre>';
+            print_r($me);
+            echo '</pre>';
+        ?>
+    </p>
   </main>
 </body>
 </html>
