@@ -80,16 +80,28 @@
 
 <?php
     $ListPays = array(
-        "France",
-        "Belgique",
-        "Espagne",
-        "Portugal",
-        "Italie",
-        "Suisse",
-        "Corée",
-        "Japon",
-        "Norvège",
-        "Pologne"
+        "FR" => "France",
+        "BE" => "Belgique",
+        "ES" => "Espagne",
+        "PO" => "Portugal",
+        "IT" => "Italie",
+        "CH" => "Suisse",
+        "CO" => "Corée",
+        "JA" => "Japon",
+        "NO" => "Norvège",
+        "PO" => "Pologne"
     );
-?>
+
+    $lesPays = "";
+
+    foreach($ListPays as $key => $pays ){
+        $lesPays .= "<option value='$key'>$pays</option>";
+    }
+
+    ?>
+    <select name="" id="">
+        <?php
+            echo $lesPays;
+        ?>
+    </select>
 
