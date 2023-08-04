@@ -6,6 +6,11 @@
   <title>Tableau</title>
 </head>
 <body>
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+?>
   <nav role="navigation">
     <a href="/index.php">Retour au menu</a>
   </nav>
@@ -14,7 +19,6 @@
     <ul>
         <li>Tout s'execute dans l'ordre.</li>
         <li>Dans un chaine de caractère se trouvant dans echo, on échappe les $</li>
-        <li>Toujours dans echo, on sépare une chaine de caractère d'une variable ou tableau d'un point</li>
     </ul>
 
     <h2>J'ai crée mon tableau my family</h2>
@@ -206,6 +210,58 @@
             echo '</pre>';
         ?>
     </p>
+
+    <h3>Création tableau de $soulmate</h3>
+    <p>
+        <?php
+            $soulmate = array(
+                "firtsname" => "Jean",
+                "lastname" => "dubas",
+                "age" => 35,
+                "taille" => 1.80,
+                "football" => false,
+                "plat_favoris" => array("blanquette", "bolognaise", "burger", "choucroute"), 
+            );
+            $soulmate["hobbies"] = ["flute", "cuisine", "bowling", "puzzle"];
+            echo '<pre>';
+            print_r($soulmate);
+            echo '</pre>';
+
+            $result = array_intersect($me['hobbies'], $soulmate['hobbies']);
+            echo '<pre>';
+            echo "Les hobbies en communs de soulmate & me <pre>";
+            print_r($result);
+            echo '<pre>';
+
+            $fusion = array_merge($me["hobbies"], $soulmate["hobbies"]);
+            echo '<pre>';
+            echo "Les hobbies en communs de soulmate & me fusionner dans un new tableau <pre>";
+            print_r($fusion);
+            echo '<pre>';
+        ?>
+    </p>
+
+    <h2>PLUS D'EXERCICES :</h2>
+    <h3>Création de tableau $web_development</h3>
+        <?php
+          $web_development = array(
+            "backend" => array(),
+            "frontend" => array()
+          );
+
+        $web_development["frontend"][] = "xhtml"; 
+        $web_development["backend"][] = "Ruby on rails"; 
+        $web_development["frontend"][] = "css"; 
+        $web_development["frontend"][] = "flash"; 
+        $web_development["frontend"][] = "javascript"; 
+        $web_development["frontend"][0] = "html";
+        unset($web_development["frontend"][2]);
+
+        echo '<pre>';
+        print_r($web_development);
+        echo '<pre>';
+        ?>
+        
   </main>
 </body>
 </html>
