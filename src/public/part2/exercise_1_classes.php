@@ -1,17 +1,38 @@
+<a href="../index.php">Retour au menu</a>
+
+<h1>Les classes</h1>
+
 <?php
 
-declare(strict_types=1);
+class Boisson {
+    public string $color;
+    public float $price;
+    public string $temperature;
+    
+    public function __construct ($color ,$price, $temperature = 'cold') {
+        $this->color = $color;
+        $this->price = $price;
+        $this->temperature = $temperature;
+    }
+    public function getInfo(){
+        echo "Cette boisson est " . $this->temperature . ", elle est de couleur " . $this->color . " et coûte " . $this->price . " euros. <br>";
+    }
+}
 
-/* EXERCISE 1
-TODO: Create a class beverage.
-TODO: Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
-TODO: Have a default value "cold" in the construct for temperature.
+$coca = new Boisson("noir", 2.00, "cold");
+$coca->getInfo();
 
-Remember for now we will use properties and methods that can be accessed from everywhere.
-TODO: Make a getInfo function which returns "This beverage is <temperature> and <color>."
-TODO: Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
- print the getInfo on the screen.
-TODO: Print the temperature on the screen.
+/* EXERCICE 1
+TODO : Créer une classe boisson.
+TODO : Créer les propriétés color (string), price (float) et temperature (string) et prévoir un construct.
+TODO : Avoir une valeur par défaut "cold" dans le construct pour la température.
 
-USE TYPEHINTING EVERYWHERE!
+Rappelez-vous que pour l'instant nous utiliserons des propriétés et des méthodes accessibles de partout.
+TODO : Créer une fonction getInfo qui retourne "Cette boisson est <température> et <couleur>".
+TODO : Instanciez un objet qui représente le cola. Assurez-vous que la couleur est fixée au noir, que le prix est égal à 2 euros et que 
+la température est froide. 
+imprimez le getInfo à l'écran.
+TODO : Imprimez la température à l'écran.
+
+UTILISEZ LA TYPOGRAPHIE PARTOUT !
 */

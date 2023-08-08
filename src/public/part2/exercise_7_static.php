@@ -1,13 +1,13 @@
 <?php
+    
+?>
 
-declare(strict_types=1);
+/* EXERCICE 7
+Copiez votre solution de l'exercice 6
 
-/* EXERCISE 7
+TODO : Créez une propriété statique dans la classe Boisson qui ne peut être accédée qu'à l'intérieur de la classe appelée adresse qui a la valeur "Melkmarkt 9, 2000 Antwerpen".
 
-Copy your solution from exercise 6
+TODO : Imprimez l'adresse sans créer un nouvel instant de la classe boisson 2 fois de deux manières différentes.
 
-TODO: Make a static property in the Beverage class that can only be accessed from inside the class called address which has the value "Melkmarkt 9, 2000 Antwerpen".
-TODO: Print the address without creating a new instant of the beverage class 2 times in two different ways.
-
-Use typehinting everywhere!
+Utilisez la typographie partout !
 */

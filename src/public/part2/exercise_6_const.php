@@ -1,18 +1,17 @@
 <?php
+    
+?>
 
-declare(strict_types=1);
+/* EXERCICE 6
+Copiez les classes de l'exercice 2.
 
-/* EXERCISE 6
+TODO : Changez les propriétés en private.
 
-Copy the classes of exercise 2.
+TODO : Créez une const barname avec la valeur 'Het Vervolg'.
+TODO : Imprimez la constante à l'écran.TODO : Créez une fonction dans beverage et utilisez la constante.
+TODO : Faites de même dans la classe bière.
+TODO : Imprimez la sortie de ces fonctions à l'écran.
+TODO : Assurez-vous que chaque impression est sur une nouvelle ligne.
 
-TODO: Change the properties to private.
-TODO: Make a const barname with the value 'Het Vervolg'.
-TODO: Print the constant on the screen.
-TODO: Create a function in beverage and use the constant.
-TODO: Do the same in the beer class.
-TODO: Print the output of these functions on the screen.
-TODO: Make sure that every print is on a new line.
-
-Use typehinting everywhere!
+Utilisez la typographie partout !
 */

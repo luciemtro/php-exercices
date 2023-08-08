@@ -1,12 +1,11 @@
 <?php
 
-declare(strict_types=1);
 
-/* EXERCISE 5
+/* EXERCICE 5
+Copiez la classe de l'exercice 1.
 
-Copy the class of exercise 1.
+TODO : Changez les propriétés en private.
 
-TODO: Change the properties to private.
-TODO: Fix the errors without using getter and setter functions.
-TODO: Change the price to 3.5 euro and print it also on the screen on a new line.
+TODO : Corrigez les erreurs sans utiliser les fonctions getter et setter.TODO : Changez le prix à 3.5 euro et imprimez-le également
+ à l'écran sur une nouvelle ligne.
 */

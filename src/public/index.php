@@ -34,6 +34,29 @@ declare(strict_types=1);
         <li>
             <a href="/form.php">Formulaire</a>
         </li>
+        <hr>
+        <h2>Partie 2</h2>
+        <li>
+            <a href="/part2/exercise_1_classes.php">Classes</a>
+        </li>
+        <li>
+            <a href="/part2/exercise_2_extending.php">Extending</a>
+        </li>
+        <li>
+            <a href="/part2/exercise_3_private.php">Private</a>
+        </li>
+        <li>
+            <a href="/part2/exercise_4_protected.php">Protected</a>
+        </li>
+        <li>
+            <a href="/part2/exercise_5_public.php">Public</a>
+        </li>
+        <li>
+            <a href="/part2/exercise_6_const.php">Const</a>
+        </li>
+        <li>
+            <a href="/part2/exercise_7_static.php">Static</a>
+        </li>
     </ol>
 
 </body>
